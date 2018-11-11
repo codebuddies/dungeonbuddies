@@ -34,6 +34,8 @@ Lastly, to delete your containers, run `docker-compose down`. Note that you woul
 
 For additional commands, run `docker-compose` in your terminal.
 
+_Note: you may find that the rails server hasn't been stopped, and trying to run `docker-compose up` will not restart the web server. If this is the case, delete the server process with `rm ./tmp/pids/server.pid`_
+
 ### Git and Github Guidelines
 **Branching**
 
