@@ -74,3 +74,6 @@ Label accordingly:
 + `feedback wanted` to let others know you're open to feedback and a review
 + `ready for review` to let others know that you're ready for an official code review
 + `ready to merge` to let people know that this PR is good to merge with it's parent branch.
+
+## License
+Dungeons and Buddies is released under the [MIT License](https://github.com/codebuddies/dungeonbuddies/blob/develop/LICENSE).
