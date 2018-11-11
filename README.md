@@ -41,7 +41,8 @@ The `master` branch is saved for deploying releases to production.
 
 `develop` is set as our default development branch. When working on an issue, for the most part, you'll be branching off of `develop`. For example:
 ```bash
-# Tip: In order to keep focus on what your goals are for the branch, name it as an activity of what you are working on.
+# Tip: In order to keep focus on what your goals are for the branch, name it as
+# an activity of what you are working on.
 git checkout -b add-user-authentication develop
 ```
 
@@ -52,7 +53,8 @@ Make sure to commit often and write your commit messages in present tense as not
 # The first line should be a generalized statement of what you're committing.
 Set up User model for authentication
 #
-# The second and after lines should be more of a detailed statement of what you are changing in your commit.
+# The second and after lines should be more of a detailed statement of
+# what you are changing in your commit.
 Create `User` model.
 Add validations to email attributes.
 ```
