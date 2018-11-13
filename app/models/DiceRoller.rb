@@ -2,11 +2,11 @@
 # Using simple dice notation  xdy == rollingDiceFunc(x, y, roll)
 # Created by CuDragon please pm me in codebuddies slack with questions.
 
-class DiceRoller
-    @@rolls = Array.new
+class Dice
+    @rolls = Array.new
 
-    def rollingDiceFunc(numberOfDice, diceSize)
-        value = @@rolls
+    def roll(numberOfDice, diceSize)
+        value = @rolls
         if numberOfDice == 1
             value.push(rand(1..diceSize))
             #puts "#{value}"  # Testing uncomment to see array Values
@@ -24,7 +24,7 @@ class DiceRoller
     # This is the most used dice in our Game Mechanics
 
     def rollD20()
-        self.rollingDiceFunc(1,20)
+        self.roll(1,20)
     end
 end
 
