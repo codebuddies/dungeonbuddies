@@ -1,5 +1,5 @@
 # Dungeons and Buddies
-**Dugeons and Buddies** is a MUD-based online game that supports playing with multiple players in real time. For the current status of the project, see: https://github.com/codebuddies/dungeonbuddies/projects/2
+**Dungeons and Buddies** is a MUD-based online game that supports playing with multiple players in real time. For the current status of the project, see: https://github.com/codebuddies/dungeonbuddies/projects/2
 
 ## Contribution Guidelines
 ### Getting Started
