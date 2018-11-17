@@ -20,11 +20,8 @@ class Dice
     dice_results.sum
   end
 
+  # Returns a new array of random values based on the `number_of_dice`
   def dice_results
-    Array.new(number_of_dice) { simulate_roll }
-  end
-
-  def simulate_roll
-    rand(1..number_of_sides)
+    Array.new(number_of_dice) { rand(1..number_of_sides) }
   end
 end
