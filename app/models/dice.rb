@@ -11,8 +11,8 @@ class Dice
     @number_of_sides = number_of_sides
   end
 
-  # By default, a `.roll` method will roll a one six-sided dice
-  def self.roll (number_of_dice: 1, number_of_sides: 6)
+  # By default, a `.roll` method will roll a one twenty-sided dice
+  def self.roll (number_of_dice: 1, number_of_sides: 20)
     new(number_of_dice, number_of_sides).results
   end
 
