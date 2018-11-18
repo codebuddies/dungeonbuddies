@@ -15,6 +15,9 @@ gem "clearance"
 
 gem 'webpacker', '~> 3.5'
 
+# For authentication 
+gem "clearance"
+
 # Upgrade rack security vulnerability
 gem 'rack', '>= 2.0.6'
 
