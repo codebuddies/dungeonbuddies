@@ -11,6 +11,8 @@ gem 'sass-rails'
 # Bulma for our main front end UI framework
 gem "bulma-rails", "~> 0.7.2"
 
+gem "clearance"
+
 gem 'webpacker', '~> 3.5'
 
 # Upgrade rack security vulnerability
