@@ -19,4 +19,11 @@ RSpec.describe Dice, type: :model do
       expect(results.class).to be Array
     end
   end
+
+  describe '#results' do
+    it 'should be between 1 and 6' do
+      results = dice.results
+      expect(results).to be_between(1,6)
+    end
+  end
 end
