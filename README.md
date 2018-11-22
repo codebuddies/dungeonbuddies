@@ -1,5 +1,5 @@
 # Dungeons and Buddies
-**Dungeons and Buddies** is a MUD-based online game that supports playing with multiple players in real time. For the current status of the project, see: https://github.com/codebuddies/dungeonbuddies/projects/2
+**Dungeons and Buddies** is a MUD-based online game that supports playing with multiple players in real time. For the current status of the project, see: [Alpha Release 0.1.0](https://github.com/codebuddies/dungeonbuddies/projects/2).
 
 ## Contribution Guidelines
 ### Getting Started
@@ -26,15 +26,27 @@ This should build and launch the project using Docker. Once it is finished, your
 
 **Docker Notes**
 
-To stop Docker, use `ctrl + c` on the terminal to stop displaying the logs and run `docker-compose stop` to stop all containers.
+To stop all Docker services, run `docker-compose stop`. Alternatively, running `docker-compose start` will start them again.
 
-To start Docker up again (as long as you have not deleted your containers), run `docker-compose start`.
-
-Lastly, to delete your containers, run `docker-compose down`. Note that you would need to run `docker-compose up` again to rebuild and start the app if you remove your containers.
+To stop services _and_ delete your containers, run `docker-compose down`.
 
 For additional commands, run `docker-compose` in your terminal.
 
-_Note: you may find that the rails server hasn't been stopped, and trying to run `docker-compose up` will not restart the web server. If this is the case, delete the server process with `rm ./tmp/pids/server.pid`_
+**Note:** you may find that the rails server hasn't been stopped, and trying to run `docker-compose up` will not restart the web server. If this is the case, delete the server process with `rm ./tmp/pids/server.pid`. See [issue](https://github.com/codebuddies/dungeonbuddies/issues/13).
+
+**Important:** To use Gemfile commands such as `bundle`, `rspec` or other `rails` commands, this must be ran against the docker services. To use these commands, append them with `docker-compose exec web <command>`. For example:
+
+```bash
+docker-compose exec web rails generate migration AddPartNumberToProducts
+```
+
+```bash
+docker-compose exec web rspec
+```
+
+```bash
+docker-compose exec web bundle install
+```
 
 ### Git and Github Guidelines
 **Branching**
