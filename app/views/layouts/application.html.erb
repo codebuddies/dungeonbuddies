@@ -11,9 +11,10 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <%= link_to '🜃 D&B',
-                    root_path,
-                    class: 'navbar-item has-text-weight-bold has-text-grey' %>
+              <%= link_to root_path,
+                class: 'navbar-item has-text-weight-bold has-text-grey' do %>
+                <span class="dnb-mark">🜃</span> D&B
+              <% end %>
             </div>
           </div>
         </nav>
@@ -26,7 +27,10 @@
       </div>
 
       <div class="hero-foot">
-        <div class="container">
+        <div class="container has-text-right has-text-grey">
+          <p class="is-size-7">
+            Dungeons &amp; Buddies is a collective project by the fine folks from <a href="https://www.codebuddies.org" class="has-text-underline">CodeBuddies</a>.
+          </p>
         </div>
       </div>
     </section>
