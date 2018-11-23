@@ -6,7 +6,30 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
   <body>
-    <%= yield %>
+    <section class="hero is-fullheight is-dark">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <%= link_to '🜃 D&B',
+                    root_path,
+                    class: 'navbar-item has-text-weight-bold has-text-grey' %>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-body">
+        <div class="container">
+          <%= yield %>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <div class="container">
+        </div>
+      </div>
+    </section>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
