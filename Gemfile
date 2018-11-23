@@ -4,7 +4,12 @@ gem 'rails', '~> 5.1.6'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 
+# TODO: : Ruby-Sass will be deprecated in 2019. Might be worth to look into
+# https://github.com/sass/sassc-rails or figure out how to properly replace
+# the Asset Pipeline with Webpack. AC 11/2019
 gem 'sass-rails'
+# Bulma for our main front end UI framework
+gem "bulma-rails", "~> 0.7.2"
 
 gem 'webpacker', '~> 3.5'
 
