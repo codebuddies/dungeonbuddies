@@ -1,11 +1,15 @@
-version: '3'
+version: '3.2'
+volumes:
+  postgres-data:
 services:
   db:
-    image: postgres:9.6-alpine
+    image: postgres
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
-  web:
-    build: .
+      - postgres-data:/var/lib/postgresql/data
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/dungeonbuddies
