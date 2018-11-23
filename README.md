@@ -19,7 +19,7 @@ git checkout develop
 
 If you're launching the project for the very first time, build the Docker containers.
 ```bash
-docker-compose build && docker-compose up
+docker-compose up --build
 ```
 
 This should build and launch the project using Docker. Once it is finished, your local version of the app should be accessible by going to `localhost:3000` in your browser. You can see that this works if you see a Welcome screen.
