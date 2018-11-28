@@ -1,0 +1,7 @@
+2018-11-26 20:50:53.147 EST [8670] LOG:  could not bind IPv6 address "::1": Address already in use
+2018-11-26 20:50:53.147 EST [8670] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2018-11-26 20:50:53.147 EST [8670] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2018-11-26 20:50:53.147 EST [8670] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2018-11-26 20:50:53.147 EST [8670] WARNING:  could not create listen socket for "localhost"
+2018-11-26 20:50:53.147 EST [8670] FATAL:  could not create any TCP/IP sockets
+2018-11-26 20:50:53.147 EST [8670] LOG:  database system is shut down
