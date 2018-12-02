@@ -32,9 +32,7 @@ To stop services _and_ delete your containers, run `docker-compose down`.
 
 For additional commands, run `docker-compose` in your terminal.
 
-**Note:** you may find that the rails server hasn't been stopped, and trying to run `docker-compose up` will not restart the web server. If this is the case, delete the server process with `rm ./tmp/pids/server.pid`. See [issue](https://github.com/codebuddies/dungeonbuddies/issues/13).
-
-**Important:** To use Gemfile commands such as `bundle`, `rspec` or other `rails` commands, this must be ran against the docker services. To use these commands, append them with `docker-compose exec web <command>`. For example:
+**Important:** To use Gemfile commands such as `bundle`, `rspec` or other `rails` commands, run them against the docker services. To use these commands, append them with `docker-compose exec web <command>`. For example:
 
 ```bash
 docker-compose exec web rails generate migration AddPartNumberToProducts
