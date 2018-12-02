@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Dungeonbuddies</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-  </head>
-  <body>
-    <section class="hero is-fullheight is-dark">
-      <div class="hero-head">
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <%= link_to root_path,
-                class: 'navbar-item has-text-weight-bold has-text-grey' do %>
-                <span class="dnb-mark">🜃</span> D&B
-              <% end %>
-            </div>
-          </div>
-        </nav>
-      </div>
+<head>
+  <title>Dungeonbuddies</title>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tag %>
+  <link rel="stylesheet" href="https://unpkg.com/wingcss"/>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div id="header">
+    <% if signed_in? -%>
+      <%= button_to t(".sign_out"), sign_out_path, method: :delete %>
+    <% else -%>
+      <%= link_to t(".sign_in"), sign_in_path %>
+    <% end -%>
+  </div>
 
-      <div class="hero-body">
-        <div class="container">
-          <%= yield %>
-        </div>
-      </div>
+  <div id="flash">
+    <% flash.each do |key, value| -%>
+      <div id="flash_<%= key %>"><%=h value %></div>
+    <% end %>
+  </div>
 
-      <div class="hero-foot">
-        <div class="container has-text-right has-text-grey">
-          <p class="is-size-7">
-            Dungeons &amp; Buddies is a collective project by the fine folks from <a href="https://www.codebuddies.org" class="has-text-underline">CodeBuddies</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-    <%= javascript_pack_tag 'application' %>
-  </body>
+  <%= yield %>
+</body>
 </html>
