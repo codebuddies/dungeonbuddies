@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Dungeonbuddies</title>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tag %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
-<body>
-  <div id="header">
-    <% if signed_in? -%>
-      <%= button_to t(".sign_out"), sign_out_path, method: :delete %>
-    <% else -%>
-      <%= link_to t(".sign_in"), sign_in_path %>
-    <% end -%>
-  </div>
+  <head>
+    <title>Dungeonbuddies</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+  </head>
+  <body>
+    <section class="hero is-fullheight is-dark">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <%= link_to root_path,
+                class: 'navbar-item has-text-weight-bold has-text-grey' do %>
+                <span class="dnb-mark">🜃</span> D&B
+              <% end %>
+            </div>
 
-  <div id="flash">
-    <% flash.each do |key, value| -%>
-      <div id="flash_<%= key %>"><%=h value %></div>
-    <% end %>
-  </div>
+            <div class="navbar-end has-text-grey is-uppercase is-size-7 has-text-weight-semibold">
+              <% if signed_in? %>
+                <%= button_to "Sign Out",
+                  sign_out_path,
+                  method: :delete,
+                  class: "navbar-item" %>
+              <% else %>
+                <%= link_to "Sign In", sign_in_path, class: "navbar-item" %>
+              <% end %>
+            </div>
+          </div>
+        </nav>
+      </div>
 
-  <%= yield %>
-</body>
+      <div class="hero-body">
+        <div class="container">
+          <div id="flash">
+            <% flash.each do |key, value| %>
+              <div id="flash_<%= key %>"><%= h value %></div>
+            <% end %>
+          </div>
+
+          <%= yield %>
+        </div>
+      </div>
+    <%= yield %>
+  </body>
 </html>
