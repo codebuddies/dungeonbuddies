@@ -5,14 +5,17 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 
 # For authentication
-gem "clearance"
+gem 'clearance'
+
+# Required for deploying to Heroku
+gem 'jbuilder', '~> 2.5'
 
 # TODO: : Ruby-Sass will be deprecated in 2019. Might be worth to look into
 # https://github.com/sass/sassc-rails or figure out how to properly replace
 # the Asset Pipeline with Webpack. AC 11/2019
 gem 'sass-rails'
 # Bulma for our main front end UI framework
-gem "bulma-rails", "~> 0.7.2"
+gem 'bulma-rails', '~> 0.7.2'
 
 gem 'webpacker', '~> 3.5'
 
