@@ -9,6 +9,7 @@ gem 'clearance'
 
 # Required for deploying to Heroku
 gem 'jbuilder', '~> 2.5'
+gem 'uglifier'
 
 # TODO: : Ruby-Sass will be deprecated in 2019. Might be worth to look into
 # https://github.com/sass/sassc-rails or figure out how to properly replace
