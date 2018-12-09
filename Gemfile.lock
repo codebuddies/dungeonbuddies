@@ -66,6 +66,7 @@ GEM
     email_validator (1.6.0)
       activemodel
     erubi (1.7.1)
+    execjs (2.7.0)
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -176,6 +177,8 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    uglifier (4.1.20)
+      execjs (>= 0.3.0, < 3)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -210,6 +213,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
+  uglifier
   web-console (>= 3.3.0)
   webpacker (~> 3.5)
 
